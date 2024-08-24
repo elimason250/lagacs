@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Time</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <h1>TOUR CS 2VS2 BY EL AND MAZ🏟️</h1>
+        <button onclick="toggleTimes()">Check Group</button>
+        <button onclick="toggleNextTournament()">Check Tour Next</button>
+        <button onclick="toggleInfoPayment()">Info Payment</button>
+        <button onclick="toggleChampions()">CHAMPION 🏆</button>
+        <button class="whatsapp-button" onclick="joinWhatsApp()">
+            <img src="logo.png" alt="WhatsApp Logo" class="whatsapp-logo"> Join WhatsApp
+        </button>
+        <div class="tab-content" id="times">
+            <h2>GROUP - Belum start. ❌</h2>
+            <div class="match-list">
+                <div class="match-item">GROUP A: PR <span class="score-box">0</span> - <span class="score-box">0</span> Duobadut</div>
+                <div class="match-item">GROUP B: MPG <span class="score-box">0</span> - <span class="score-box">0</span> Si imut X mas narji</div>
+                <div class="match-item">GROUP C: Predator <span class="score-box">0</span> - <span class="score-box">0</span> revenge</div>
+                <div class="match-item">GROUP D: MalaikatMaut <span class="score-box">0</span> - <span class="score-box">0</span> duomaut</div>
+                <div class="match-item semi-gap">SEMI A: ?? <span class="score-box">0</span> - <span class="score-box">0</span> ??</div>
+                <div class="match-item semi-gap">SEMI B: ?? <span class="score-box">0</span><span class="score-box">0</span> ??</div>
+                <div class="match-item">Finalist: ?? <span class="score-box">0</span> - <span class="score-box">0</span> ??</div>
+            </div>
+        </div>
+        <div class="tab-content" id="next-tournament" style="display: none;">
+            <h2>Next Tournament</h2>
+            <ul>
+                <li>Sedang host ✅🟢</li>
+            </ul>
+        </div>
+        <div class="tab-content" id="info-payment" style="display: none;">
+            <h2>Info Payment</h2>
+            <p class="info-content">
+                <strong>8 SLOT LEFT / FULL</strong><br>
+                GAS ✅ 📍 LAGA CS/2VS2/ EL AND MAZ 🐬<br>
+                <strong>PRIZE 🎁</strong><br>
+                🏆 CHAMPION: RM10.00<br><br>
+                🏦: PAYMENT BAYAR [RM 2.00] TNG ONLY<br>
+                🎟️: VIA (TNG) ONLY 📍<br>
+                🎮 MODE: SQUAD 2vs2<br>
+                START TIME: FULL = GO<br><br>
+                PM NAK JOIN CS HTTPS👇🏻<br>
+                0102352691 / 0123611822<br>
+                SLOT 8 PAY GET SLOT ✅<br><br>
+                ✅ 8 TEAM !<br>
+                ✅ PET [FALCO]<br>
+                ❌ ATAP2<br>
+                ❌ BAN<br>
+                ✅ SKIL: HTTPS<br>
+                ✅ WEAPON/ SG 2 ONLY<br>
+                🎥 NO LIVE ! 📍<br>
+                JOIN GRUP: <a href="https://chat.whatsapp.com/DrUmbbDYqhy9NWgdKVcv43" target="_blank">https://chat.whatsapp.com/DrUmbbDYqhy9NWgdKVcv43</a>
+            </p>
+        </div>
+        <div class="tab-content" id="current-champion" style="display: none;">
+            <h2>Current Champion:</h2>
+            <div>CS1: duobokep</div>
+            <div>CS2: duamaut</div>
+            <div>CS3: spiritone</div>
+            <div>CS4: </div>
+
+        </div>
+    </div>
+
+    <audio id="click-sound" src="click.mp3"></audio> <!-- Replace with your sound file -->
+
+    <script>
+        function toggleTimes() {
+            var times = document.getElementById("times");
+            var clickSound = document.getElementById("click-sound");
+            clickSound.play();
+            showTab(times);
+        }
+
+        function toggleNextTournament() {
+            var nextTournament = document.getElementById("next-tournament");
+            var clickSound = document.getElementById("click-sound");
+            clickSound.play();
+            showTab(nextTournament);
+        }
+
+        function toggleInfoPayment() {
+            var infoPayment = document.getElementById("info-payment");
+            var clickSound = document.getElementById("click-sound");
+            clickSound.play();
+            showTab(infoPayment);
+        }
+
+        function toggleChampions() {
+            var currentChampion = document.getElementById("current-champion");
+            var clickSound = document.getElementById("click-sound");
+            clickSound.play();
+            showTab(currentChampion);
+        }
+
+        function showTab(tab) {
+            var tabs = document.querySelectorAll(".tab-content");
+            tabs.forEach(function(t) {
+                t.style.display = "none";
+            });
+            tab.style.display = "block";
+        }
+
+        function joinWhatsApp() {
+            window.location.href = "https://chat.whatsapp.com/DrUmbbDYqhy9NWgdKVcv43"; // Replace with your WhatsApp link
+        }
+
+        // Cursor trail effect
+        document.addEventListener("mousemove", function(e) {
+            var trail = document.createElement("div");
+            trail.className = "trail";
+            trail.style.left = e.pageX + "px";
+            trail.style.top = e.pageY + "px";
+            document.body.appendChild(trail);
+            setTimeout(function() {
+                trail.remove();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
